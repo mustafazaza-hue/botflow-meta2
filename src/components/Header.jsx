@@ -2,6 +2,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRobot, faGlobe, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
+import Image from 'next/image'
+
 
 export default function Header() {
   const [featuresOpen, setFeaturesOpen] = useState(false)
@@ -13,9 +15,15 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-12">
             <a href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] rounded-lg flex items-center justify-center">
-                <FontAwesomeIcon icon={faRobot} className="text-white text-xl" />
-              </div>
+<div className="w-10 h-10 rounded-lg flex items-center justify-center">
+  <Image 
+    src="/favicon.ico" 
+    alt="Logo" 
+    width={40} 
+    height={40} 
+    className="w-full h-full object-contain"
+  />
+</div>
               <span className="text-xl font-bold text-[#0F172A]">BotFlow</span>
             </a>
             <div className="hidden lg:flex items-center space-x-8">

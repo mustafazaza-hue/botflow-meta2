@@ -1,6 +1,8 @@
 const { faFacebook, faTwitter, faLinkedin, faInstagram } = require("@fortawesome/free-brands-svg-icons");
 const { faRobot } = require("@fortawesome/free-solid-svg-icons");
 const { FontAwesomeIcon } = require("@fortawesome/react-fontawesome");
+import Image from 'next/image'
+
 
 export default function Footer() {
   return (  
@@ -9,8 +11,14 @@ export default function Footer() {
           <div className="grid md:grid-cols-5 gap-8 mb-12">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] rounded-lg flex items-center justify-center">
-                  <FontAwesomeIcon icon={faRobot} className="text-white text-xl" />
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+                  <Image 
+                    src="/favicon.ico" 
+                    alt="Logo" 
+                    width={40} 
+                    height={40} 
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <span className="text-xl font-bold">BotFlow</span>
               </div>
@@ -63,9 +71,10 @@ export default function Footer() {
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">© 2026 Nexus Company. All rights reserved.</p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition">Privacy Policy</a>
+              <a href="/policy" className="text-gray-400 hover:text-white transition">Privacy Policy</a>
               <a href="#" className="text-gray-400 hover:text-white transition">Terms of Service</a>
               <a href="#" className="text-gray-400 hover:text-white transition">Cookie Policy</a>
+              <a href="udd" className="text-gray-400 hover:text-white transition">GDPR Compliance</a>
             </div>
           </div>
         </div>
